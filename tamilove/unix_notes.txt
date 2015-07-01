@@ -1,0 +1,71 @@
+* pwd - to see your path of where you are in your terminal
+* clear - clears your terminal
+
+1) First you need to create a directory which will then be turned into a repository.
+  mk dir ‘folderName’ - This creates a folder on your desktop
+  mk dir ‘folderName’/‘subfolder’ - This creates a sub folder in your parent folder
+  cd repos/git-basics - changes directories inside the subdirectory called ‘git-basics’ inside the folder repos
+  git init - initialize a new repository on this computer in the folder that I am in. (you want to do this every time you have a new project) it will add invisible GIT files to comment with GIT.
+  git status - See what the status is before adding or committing anything
+
+2) You will need to ‘add’ files (also known as staging) before you can commit anything
+  git add <file.name> - This adds just the file.name Make sure to add the tag .html, .js etc.
+  git add file.name file2.name file3.name - This adds three files
+  git add *.html - This adds all files with the .html tag
+  git add . - This adds any untracked directories, files, or whatever and adds it.
+  git status - See what the status is before adding or committing anything
+
+
+3) Actually committing your project
+  git status - See what the status is before adding or committing anything
+  git commit -m ‘add something about your initial repo/commit’- to create a commit, committing that this is done (haven’t uploaded yet) You will also want to put a little message about WHY this commit is. You can look at your
+
+** if you accidentally get into the vim text window/editor, click esc, and at the bottom of the command line,
+type the two letters ‘:wq’
+
+4) Seeing where you are in the commit process
+  git diff - See what the difference between the commit and copy on computer
+  git diff --staged - See the difference between my copy and the staged version
+
+5) Creating, switching between branches, managing branches
+  git branch - to see which branch you are on and which ones are available
+  git branch <branchName> - to add a branch
+  git checkout <branchName> - to switch to a branch
+  git checkout -b <branchName> - to add and switch to a branch
+  git branch -d <branchName> - deleting a branch
+  git branch -D <branchName> - deleting a branch whether it has been merged or NOT
+  git branch --merged - See which branches have been merged
+  git branch --no-merge - See which branches have NOT been merged
+
+6) moving a branch past the original commit (not finished)
+  a. git branch - to see which branch you are on and which ones are available
+  b. git checkout <branchName> - to switch to the correct branch
+  c. make changes in your text editor
+  d. git checkout -b <branchName> - to add and switch to a branch
+  e. git status - See what the status is before adding or committing anything
+
+7) Merging
+  a. git branch - to see which branch you are on and which ones are available
+  b. git status - See what the status is before adding or committing anything and CLEAN
+  c. git checkout master-  need to be on the branch that will be receiving the merge
+  d. git merge <branchName> - this is the branch name at which you want to merge into your master   branch (will merge all the commits)
+  e. git status - See what the status is before adding or committing anything
+
+8) pushing files from terminal to GitHub.com
+  a. first you need to create a repository for the project you are working on. You should (don’t have to)
+  name it the same thing as the file saved on your desktop. Once saved, there will be a URL connected to  the repo. MAKE SURE to uncheck the box: Initialize this repository with a README
+  b. git remote add origin <paste URL> - click return
+  c. git push -u origin master - establishing a link between these two branches
+  d. terminal will prompt you to use your log in name and password for Git Hub. Magic happens. Done.
+  e. git status - See what the status is before adding or committing anything
+  f. now go back to GitHub.com and you will find your repo uploaded
+
+git pull origin master/<name> - to pull from github/ (creating a fork)
+git push origin <name> - to push to github
+git log - to get the list Commit History for older versions.
+
+** in GitHub make sure to click on “Pull request”.
+
+echo - ?
+export -
+
